@@ -1,8 +1,2 @@
-automation\Scenario\InformationScenario.class
-automation\Scenario\OverviewScenario.class
-automation\Scenario\E2E_Scenario.class
-automation\Scenario\VerifyScenario.class
-automation\Scenario\FinishScenario.class
-automation\Scenario\CheckoutScenario.class
-automation\Scenario\LocatorScenario.class
-automation\Scenario\LoginScenario.class
+stepdefenitions\StepImpl.class
+runner\TestRunner.class

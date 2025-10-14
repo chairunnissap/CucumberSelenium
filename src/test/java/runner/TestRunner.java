@@ -4,8 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-    features = "src/test/resources/features/", // Path ke folder .feature
-    glue = {"stepdefinitions"},               // Package Step Definitions kamu (tanpa path src)
+    features = "classpath:features",
+    glue = {"stepdefenitions"},               
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",
