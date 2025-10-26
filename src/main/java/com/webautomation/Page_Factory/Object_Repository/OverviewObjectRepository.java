@@ -13,6 +13,7 @@ public class OverviewObjectRepository {
     public By Price = By.cssSelector("[data-test='inventory-item-price']");
     public By PriceTotal = By.cssSelector("[data-test='subtotal-label']");
     public By Finish = By.xpath("//button[@id='finish']");
+    public By listProductOverview2 = By.cssSelector("[data-test='inventory-item']");
 
     public OverviewObjectRepository(WebDriver driver){
         PageFactory.initElements(driver,this);

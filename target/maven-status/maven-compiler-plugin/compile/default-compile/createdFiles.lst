@@ -1,6 +1,7 @@
 com\webautomation\Page_Factory\Object_Repository\CartObjectRepository.class
 com\webautomation\Page_Factory\Object_Repository\DashboardObjectRepository.class
 com\webautomation\Page_Factory\Page\DashboardPage.class
+com\webautomation\AbstractComponents\AbstractComponents.class
 com\webautomation\Page_Factory\Page\LoginPage.class
 com\webautomation\Main.class
 com\webautomation\Page_Factory\Object_Repository\OverviewObjectRepository.class

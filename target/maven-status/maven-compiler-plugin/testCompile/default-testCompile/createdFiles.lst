@@ -1,2 +1,3 @@
 stepdefenitions\StepImpl.class
+hook\Hooks.class
 runner\TestRunner.class

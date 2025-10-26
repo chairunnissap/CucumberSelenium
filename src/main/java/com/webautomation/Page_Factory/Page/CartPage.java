@@ -2,26 +2,27 @@ package com.webautomation.Page_Factory.Page;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import com.webautomation.AbstractComponents.AbstractComponents;
 import com.webautomation.Page_Factory.Object_Repository.CartObjectRepository;
 
-public class CartPage {
+public class CartPage extends AbstractComponents{
     private CartObjectRepository cartObjectRepository;
     private WebDriver driver;
 
     public CartPage(WebDriver driver){
+        super(driver);
         this.cartObjectRepository = new CartObjectRepository(driver);
         this.driver = driver;
     }
 
-    public void GoToCart() throws InterruptedException{
+    public void GoToCart() {
         WebElement cartLink = driver.findElement(cartObjectRepository.cartLink);
         cartLink.click();
-        Thread.sleep(2000);
     }
 
     public WebElement VerifyName(String productName) {
+        waitForVisibilityElement(cartObjectRepository.listProductVerif);
         List<WebElement> productVerif = driver.findElements(cartObjectRepository.listProductVerif);
-
         return productVerif.stream()
         .filter(item -> {
             String name = item.findElement(cartObjectRepository.Name).getText().trim();
@@ -32,8 +33,8 @@ public class CartPage {
     }
 
     public WebElement VerifyPrice(String productPrice) {
+        waitForVisibilityElement(cartObjectRepository.listProductVerif);
         List<WebElement> productVerif = driver.findElements(cartObjectRepository.listProductVerif);
-
         return productVerif.stream()
         .filter(item -> {
             String price = item.findElement(cartObjectRepository.Price).getText().trim();
@@ -44,8 +45,8 @@ public class CartPage {
     }
 
     public WebElement VerifyQty(String productQty) {
+        waitForVisibilityElement(cartObjectRepository.listProductVerif);
         List<WebElement> productVerif = driver.findElements(cartObjectRepository.listProductVerif);
-
         return productVerif.stream()
         .filter(item -> {
             String qty = item.findElement(cartObjectRepository.Qty).getText().trim();
